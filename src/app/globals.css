@@ -729,6 +729,19 @@
 	animation: heroSweep 1.2s linear infinite;
 }
 
+/* Disable CTA animations only inside the banner block */
+.cta-banner .cta-button-animated,
+.cta-banner .cta-button-animated:hover {
+	transition: none;
+	transform: none;
+}
+
+.cta-banner .cta-button-animated::after,
+.cta-banner .cta-button-animated:hover::after {
+	opacity: 0;
+	animation: none;
+}
+
 .footer-icon {
 	transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
 }

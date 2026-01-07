@@ -14,7 +14,7 @@ type Benefit = {
 
 const benefits: Benefit[] = [
   {
-    icon: "/cinturasin.png",
+    icon: "/tecnologiaavanzada.png",
     alt: "Tecnología avanzada",
     title: "Tecnología avanzada",
     description:
@@ -22,7 +22,7 @@ const benefits: Benefit[] = [
     tag: "Precisión láser",
   },
   {
-    icon: "/recuperacionrapidasin.png",
+    icon: "/acompañamientomedico.png",
     alt: "Acompañamiento médico",
     title: "Acompañamiento médico",
     description:
@@ -30,7 +30,7 @@ const benefits: Benefit[] = [
     tag: "Seguimiento médico",
   },
   {
-    icon: "/backwomansin.png",
+    icon: "/resultadosvisibles.png",
     alt: "Resultados visibles",
     title: "Resultados visibles",
     description:

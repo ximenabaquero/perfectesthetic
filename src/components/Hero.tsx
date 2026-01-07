@@ -16,6 +16,14 @@ export default function Hero() {
         backgroundColor: colors.background
       }}
     >
+      <div className="absolute top-6 right-6 z-20">
+        <a
+          href="/admin"
+          className="inline-flex items-center rounded-full bg-white/85 px-5 py-2 text-sm font-semibold text-[#b14ccf] border border-white/60"
+        >
+          Admin
+        </a>
+      </div>
       <div className="hero-backdrop" aria-hidden />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
@@ -45,7 +53,7 @@ export default function Hero() {
               className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4"
               style={{ color: colors.foreground }}
             >
-              Lipólisis láser sin cirugía, resultados desde la primera sesión
+              <span className="font-semibold">Lipólisis láser sin cirugía, resultados desde la primera sesión</span>
             </h2>
             <p
               className="text-lg sm:text-xl max-w-2xl mx-auto"

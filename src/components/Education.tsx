@@ -23,6 +23,7 @@ const topics = [
 const topicIcons = [
   (
     <svg
+      key="topicIcon-0"
       className="h-6 w-6"
       viewBox="0 0 24 24"
       fill="none"
@@ -38,6 +39,7 @@ const topicIcons = [
   ),
   (
     <svg
+      key="topicIcon-1"
       className="h-6 w-6"
       viewBox="0 0 24 24"
       fill="none"
@@ -52,6 +54,7 @@ const topicIcons = [
   ),
   (
     <svg
+      key="topicIcon-2"
       className="h-6 w-6"
       viewBox="0 0 24 24"
       fill="none"
@@ -116,14 +119,16 @@ export default function Education() {
               ref={(el) => {
                 cardsRef.current[index] = el;
               }}
-              className="edu-card card-hover-elevate h-full rounded-[22px] bg-white/20 backdrop-blur-[12px] border border-white/40 p-6 shadow-lg shadow-gray-200/60"
+              className="edu-card group h-full"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="edu-card__icon text-[#c58adf] mb-4">
-                {topicIcons[index % topicIcons.length]}
+              <div className="card-sheen card-hover-elevate h-full rounded-[22px] bg-white/20 backdrop-blur-[12px] border border-white/40 p-6 shadow-lg shadow-gray-200/60">
+                <div className="edu-card__icon text-[#c58adf] mb-4">
+                  {topicIcons[index % topicIcons.length]}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{topic.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{topic.body}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">{topic.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{topic.body}</p>
             </div>
           ))}
         </div>

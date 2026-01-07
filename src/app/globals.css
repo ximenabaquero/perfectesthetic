@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/* Custom font (place files in /public/fonts) */
+@font-face {
+	font-family: "Bombshell Pro";
+	src:
+		url("/fonts/BombshellPro.woff2") format("woff2"),
+		url("/fonts/BombshellPro.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bombshell Pro";
+	src:
+		url("/fonts/BombshellPro-Italic.woff2") format("woff2"),
+		url("/fonts/BombshellPro-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+.font-bombshell {
+	font-family: "Bombshell Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 /* Estilos base - Los colores ahora se manejan desde src/config/colors.ts */
 
 /* Hero animations */

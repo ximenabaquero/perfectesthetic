@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Admin() {
   return (
     <section id="admin" className="py-20 bg-white">
@@ -7,7 +9,7 @@ export default function Admin() {
           <div className="decor-line" aria-hidden />
         </div>
 
-        <div className="mt-10 max-w-md mx-auto">
+        <div className="mt-10 mx-auto max-w-5xl grid gap-8 lg:grid-cols-2 items-center">
           <div className="rounded-3xl border border-gray-200 bg-white p-6 sm:p-8 shadow-lg shadow-gray-200/60">
             <form className="space-y-5" autoComplete="on">
               <div className="text-left">
@@ -45,6 +47,51 @@ export default function Admin() {
                 Ingresar
               </button>
             </form>
+          </div>
+
+          <div className="text-center">
+            <div className="group">
+              <div className="relative w-full">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -top-6 -left-6 z-20 select-none text-3xl text-[#b14ccf]/70"
+                >
+                  ✿
+                </span>
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -top-7 -right-4 z-20 select-none text-2xl text-[#b14ccf]/70"
+                >
+                  ❀
+                </span>
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -bottom-6 -left-5 z-20 select-none text-2xl text-[#b14ccf]/70"
+                >
+                  ❀
+                </span>
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -bottom-7 -right-6 z-20 select-none text-3xl text-[#b14ccf]/70"
+                >
+                  ✿
+                </span>
+
+                <div className="card-sheen relative w-full overflow-hidden rounded-3xl aspect-[16/10]">
+                  <Image
+                    src="/adel.jpeg"
+                    alt="Adel"
+                    fill
+                    sizes="(min-width: 1024px) 520px, 90vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+            <h3 className="font-bombshell mt-5 text-2xl font-medium tracking-[0.14em] text-[#b14ccf]">
+              Bienvenida Adel
+            </h3>
           </div>
         </div>
       </div>

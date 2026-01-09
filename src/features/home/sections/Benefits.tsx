@@ -57,9 +57,7 @@ export default function Benefits() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number((entry.target as HTMLElement).dataset.index);
-            setVisible((prev) =>
-              prev.map((item, i) => (i === index ? true : item))
-            );
+            setVisible((prev) => prev.map((item, i) => (i === index ? true : item)));
             observer.unobserve(entry.target);
           }
         });
@@ -68,9 +66,7 @@ export default function Benefits() {
     );
 
     cardRefs.current.forEach((card) => {
-      if (card) {
-        observer.observe(card);
-      }
+      if (card) observer.observe(card);
     });
 
     return () => observer.disconnect();
@@ -102,9 +98,7 @@ export default function Benefits() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`soft-gradient-border benefit-card card-hover-elevate ${
-                visible[index] ? "is-visible" : ""
-              }`}
+              className={`soft-gradient-border benefit-card card-hover-elevate ${visible[index] ? "is-visible" : ""}`}
             >
               <div className="soft-gradient-border__inner card-sheen relative h-full rounded-2xl p-8 group">
                 <div className="benefit-card__halo" aria-hidden />
@@ -127,15 +121,11 @@ export default function Benefits() {
                     <span className="inline-flex items-center justify-center px-4 py-1.5 text-[11px] font-semibold tracking-[0.16em] uppercase text-[#a35ab6] bg-[#f7ecf8] border border-white/70 rounded-full shadow-sm">
                       {benefit.tag}
                     </span>
-                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight leading-tight">
-                      {benefit.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-slate-900 tracking-tight leading-tight">{benefit.title}</h3>
                     <div className="title-underline" aria-hidden />
                   </div>
 
-                  <p className="text-base text-slate-600 leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <p className="text-base text-slate-600 leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
             </div>
@@ -146,9 +136,7 @@ export default function Benefits() {
           <div className="relative overflow-hidden rounded-2xl border border-white/80 bg-white/90 shadow-[0_20px_60px_rgba(0,0,0,0.08)] px-8 py-10 max-w-2xl w-full text-center">
             <div className="absolute inset-0 slow-gradient-bar opacity-40" aria-hidden />
             <div className="relative z-10">
-              <h3 className="text-2xl font-semibold text-slate-900 tracking-tight mb-3">
-                ¿Lista para tu transformación?
-              </h3>
+              <h3 className="text-2xl font-semibold text-slate-900 tracking-tight mb-3">¿Lista para tu transformación?</h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 Agenda tu valoración y diseñemos un plan preciso, con resultados visibles y recuperación guiada.
               </p>

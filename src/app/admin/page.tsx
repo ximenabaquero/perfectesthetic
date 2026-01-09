@@ -1,9 +1,9 @@
-import Admin from "@/components/Admin";
+import AdminLogin from "@/features/auth/AdminLogin";
 
 export default function AdminPage() {
   return (
     <main className="min-h-screen">
-      <Admin />
+      <AdminLogin />
     </main>
   );
 }

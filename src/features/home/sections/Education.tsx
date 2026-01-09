@@ -73,34 +73,32 @@ const topicIcons = [
 export default function Education() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() =>
-    {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("edu-card--visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("edu-card--visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-      cardsRef.current.forEach((card) => {
-        if (card) observer.observe(card);
-      });
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
 
-      return () => observer.disconnect();
-    },
-    []
-  );
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
       className="py-16"
       style={{
-        background: "linear-gradient(180deg, rgba(255, 224, 242, 0.35) 0%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.4) 100%)",
+        background:
+          "linear-gradient(180deg, rgba(255, 224, 242, 0.35) 0%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.4) 100%)",
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,9 +121,7 @@ export default function Education() {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="card-sheen card-hover-elevate h-full rounded-[22px] bg-white/20 backdrop-blur-[12px] border border-white/40 p-6 shadow-lg shadow-gray-200/60">
-                <div className="edu-card__icon text-[#c58adf] mb-4">
-                  {topicIcons[index % topicIcons.length]}
-                </div>
+                <div className="edu-card__icon text-[#c58adf] mb-4">{topicIcons[index % topicIcons.length]}</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{topic.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{topic.body}</p>
               </div>

@@ -59,7 +59,7 @@ export default function Testimonials() {
   const delays = useMemo(() => messages.map((_, idx) => `${idx * 0.12}s`), []);
 
   return (
-    <section className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-3">Testimonios en WhatsApp</h2>

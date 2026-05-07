@@ -95,6 +95,7 @@ export default function Education() {
 
   return (
     <section
+      id="education"
       className="py-16"
       style={{
         background:

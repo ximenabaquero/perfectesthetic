@@ -73,7 +73,7 @@ export default function Benefits() {
   }, []);
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section id="benefits" className="relative py-24 bg-white overflow-hidden">
       <div className="absolute inset-x-0 top-14 h-1 slow-gradient-bar" aria-hidden />
       <div
         className="absolute inset-x-0 -bottom-20 h-48 bg-gradient-to-b from-[#f7ecf8] via-white to-white pointer-events-none"

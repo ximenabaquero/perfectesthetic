@@ -3,8 +3,31 @@ import "./globals.css";
 import { colors } from "@/config/colors";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.perfectesthetic.com"),
   title: "Perfestetic - Lipolisis Láser",
   description: "Centro de estética especializado en lipolisis láser. Reducción de grasa, recuperación rápida y resultados visibles.",
+  openGraph: {
+    title: "Perfestetic - Lipolisis Láser",
+    description: "Centro de estética especializado en lipolisis láser. Reducción de grasa, recuperación rápida y resultados visibles.",
+    url: "https://www.perfectesthetic.com",
+    siteName: "Perfestetic",
+    images: [
+      {
+        url: "/miniatura.png",
+        width: 1200,
+        height: 630,
+        alt: "Perfestetic - Lipolisis Láser sin cirugía",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Perfestetic - Lipolisis Láser",
+    description: "Centro de estética especializado en lipolisis láser. Reducción de grasa, recuperación rápida y resultados visibles.",
+    images: ["/miniatura.png"],
+  },
 };
 
 export default function RootLayout({

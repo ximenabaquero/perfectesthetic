@@ -2,6 +2,8 @@ const services = [
 
   {
 
+    badge: "Tratamiento estrella",
+
     title: "Lipólisis láser",
 
     description:
@@ -13,6 +15,8 @@ const services = [
   },
 
   {
+
+    badge: "Tensado facial",
 
     title: "Tensamax",
 
@@ -26,6 +30,8 @@ const services = [
 
   {
 
+    badge: "Hidratación & volumen",
+
     title: "Ácido hialurónico",
 
     description:
@@ -37,6 +43,8 @@ const services = [
   },
 
   {
+
+    badge: "Lifting sin cirugía",
 
     title: "Hilos tensores",
 
@@ -50,6 +58,8 @@ const services = [
 
   {
 
+    badge: "Regeneración celular",
+
     title: "Plasma rico en plaquetas",
 
     description:
@@ -61,6 +71,8 @@ const services = [
   },
 
   {
+
+    badge: "Suavizado de arrugas",
 
     title: "Botox",
 
@@ -86,7 +98,7 @@ export default function Services() {
 
         <div className="text-center mb-16">
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Nuestros Servicios</h2>
 
           <div className="decor-line" aria-hidden />
 
@@ -112,7 +124,7 @@ export default function Services() {
 
                   <div className="mb-4 inline-flex items-center justify-center rounded-full bg-[#f7e2f5] px-3 py-1 text-xs font-semibold text-[#b14ccf]">
 
-                    {service.title}
+                    {service.badge}
 
                   </div>
 

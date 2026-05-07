@@ -82,7 +82,7 @@ export default function Benefits() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">
             <span className="underline-animated">¿Por qué elegir Perfestetic?</span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">

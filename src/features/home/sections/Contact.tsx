@@ -69,7 +69,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-slate-900 tracking-tight mb-4">Contáctanos</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Contáctanos</h2>
           <div className="decor-line" aria-hidden />
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Estamos aquí para resolver tus dudas y diseñar un plan con precisión médica y calidez humana.

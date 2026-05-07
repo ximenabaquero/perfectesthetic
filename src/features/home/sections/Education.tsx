@@ -104,7 +104,7 @@ export default function Education() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">Educación y cuidado</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Educación y cuidado</h2>
           <div className="decor-line" aria-hidden />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Explicaciones claras, basadas en práctica médica, para que tomes decisiones seguras y tengas una recuperación tranquila.

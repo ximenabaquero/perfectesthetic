@@ -57,7 +57,7 @@ export default function Gallery() {
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Resultados Reales</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Resultados Reales</h2>
           <div className="w-24 h-1 bg-[#b659a0] mx-auto rounded-full mb-6" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Descubre las transformaciones increíbles que hemos logrado con nuestros pacientes

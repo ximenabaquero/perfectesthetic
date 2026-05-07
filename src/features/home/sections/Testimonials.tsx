@@ -62,7 +62,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-3">Testimonios en WhatsApp</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Testimonios en WhatsApp</h2>
           <div className="decor-line" aria-hidden />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Conversaciones reales que muestran resultados, acompañamiento médico y seguridad en cada paso.

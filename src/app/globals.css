@@ -30,6 +30,12 @@ html {
 	font-family: "Bombshell Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.section-title {
+	font-family: "Playfair Display", Georgia, serif;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+}
+
 /* Estilos base - Los colores ahora se manejan desde src/config/colors.ts */
 
 /* Hero animations */

@@ -66,7 +66,8 @@ export default function Navbar() {
             
             <div className="flex flex-col items-start -space-y-2">
               <span 
-                className="text-2xl lg:text-3xl text-gray-800"
+                className="text-2xl lg:text-3xl italic"
+                style={{ fontFamily: "'Playfair Display', serif", color: "#1a1a1a" }}
               >
                 PerfeStetic
               </span>

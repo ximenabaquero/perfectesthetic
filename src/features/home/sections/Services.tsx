@@ -42,7 +42,7 @@ export default function Services() {
     <section id="services" className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* ENCABEZADO - Ahora coincide con Benefits */}
+        {/* ENCABEZADO. - Ahora coincide con Benefits */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

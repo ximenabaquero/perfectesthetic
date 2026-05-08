@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Perfestetic",
     images: [
       {
-        url: "/miniatura.png",
+        url: "/logoicono.webp",
         width: 1200,
         height: 630,
         alt: "Perfestetic - Lipolisis Láser sin cirugía",

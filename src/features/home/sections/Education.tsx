@@ -1,132 +1,118 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const topics = [
   {
     title: "¿Cómo se forma la fibrosis?",
-    body:
-      "Tras un procedimiento, el tejido se inflama y puede generar fibras duras si no hay drenaje, compresión adecuada o movimiento suave. El control médico y el masaje correcto evitan que ese tejido cicatrice de forma irregular.",
+    body: "Tras un procedimiento, el tejido se inflama y puede generar fibras duras si no hay drenaje o compresión adecuada. El control médico evita que el tejido cicatrice de forma irregular.",
+    icon: (
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+      </svg>
+    ),
   },
   {
-    title: "¿Por qué la grasa localizada no desaparece solo con ejercicio?",
-    body:
-      "Los adipocitos en ciertas zonas tienen más receptores para almacenar que para liberar grasa. El ejercicio ayuda a reducir volumen general, pero la distribución depende de receptores hormonales y genética; por eso necesitamos tecnologías focalizadas como la lipólisis láser.",
+    title: "¿Por qué la grasa no se va solo con ejercicio?",
+    body: "Los adipocitos en ciertas zonas tienen más receptores para almacenar que para liberar grasa. Por eso necesitamos tecnologías focalizadas como la lipólisis láser para esculpir zonas rebeldes.",
+    icon: (
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+      </svg>
+    ),
   },
   {
-    title: "Beneficios de la faja en post-lipólisis",
-    body:
-      "La compresión uniforme reduce inflamación, ayuda a que la piel se adhiera al nuevo contorno y disminuye el riesgo de seromas y fibrosis. Usarla según indicación médica acelera una recuperación más segura y estética.",
+    title: "Beneficios de la faja post-lipólisis",
+    body: "La compresión uniforme ayuda a que la piel se adhiera al nuevo contorno y disminuye el riesgo de seromas. Usarla según indicación médica acelera una recuperación estética y segura.",
+    icon: (
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+      </svg>
+    ),
   },
-];
-
-const topicIcons = [
-  (
-    <svg
-      key="topicIcon-0"
-      className="h-6 w-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 12h3l1.5-4 3 8 1.5-4H20" />
-      <path d="M5 5h4M15 19h4" />
-      <circle cx="12" cy="12" r="9.25" />
-    </svg>
-  ),
-  (
-    <svg
-      key="topicIcon-1"
-      className="h-6 w-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M6 9c0-3 2.5-5.5 6-5.5S18 6 18 9c0 5-6 9-6 9S6 14 6 9Z" />
-      <path d="M12 9.5c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1Z" />
-    </svg>
-  ),
-  (
-    <svg
-      key="topicIcon-2"
-      className="h-6 w-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="4" y="5" width="16" height="14" rx="3" />
-      <path d="M9 9h6" />
-      <path d="M9 13h3" />
-    </svg>
-  ),
 ];
 
 export default function Education() {
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("edu-card--visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    cardsRef.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const accentPurple = "#b14ccf";
 
   return (
     <section
       id="education"
-      className="py-16"
+      className="relative py-20 md:py-32 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, rgba(255, 224, 242, 0.35) 0%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.4) 100%)",
+          "linear-gradient(180deg, rgba(251, 232, 245, 0.4) 0%, rgba(255, 255, 255, 1) 100%)",
       }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 section-title">Educación y cuidado</h2>
-          <div className="decor-line" aria-hidden />
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Explicaciones claras, basadas en práctica médica, para que tomes decisiones seguras y tengas una recuperación tranquila.
-          </p>
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        
+        {/* Cabecera Coherente */}
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl md:text-5xl font-light text-slate-900 leading-tight mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Educación y <span className="italic" style={{ color: accentPurple }}>Cuidado</span>
+          </motion.h2>
+          
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="w-20 h-1 bg-[#b14ccf] mx-auto mb-8 rounded-full" 
+          />
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-base md:text-lg text-slate-600 font-light leading-relaxed"
+          >
+            Explicaciones claras basadas en la práctica médica para una recuperación consciente y resultados duraderos.
+          </motion.p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* Grid Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {topics.map((topic, index) => (
-            <div
+            <motion.div
               key={topic.title}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              className="edu-card group h-full"
-              style={{ animationDelay: `${index * 150}ms` }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
+              className="group h-full"
             >
-              <div className="card-sheen card-hover-elevate h-full rounded-[22px] bg-white/20 backdrop-blur-[12px] border border-white/40 p-6 shadow-lg shadow-gray-200/60">
-                <div className="edu-card__icon text-[#c58adf] mb-4">{topicIcons[index % topicIcons.length]}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{topic.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{topic.body}</p>
+              {/* Mismo estilo de tarjeta que Servicios */}
+              <div className="soft-gradient-border h-full card-hover-elevate">
+                <div className="card-sheen relative h-full rounded-[22px] bg-white/30 backdrop-blur-md border border-white/50 p-8 flex flex-col shadow-sm transition-all duration-500 hover:shadow-xl">
+                  
+                  {/* Icono con Halo Sutil */}
+                  <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-sm text-[#b14ccf] group-hover:scale-110 transition-transform duration-500 border border-purple-50">
+                    <div className="absolute inset-0 bg-purple-100/20 blur-lg rounded-full" />
+                    <div className="relative z-10">{topic.icon}</div>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4 tracking-tight leading-snug group-hover:text-[#b14ccf] transition-colors">
+                    {topic.title}
+                  </h3>
+                  
+                  <p className="text-gray-500 text-sm md:text-base font-light leading-relaxed">
+                    {topic.body}
+                  </p>
+
+                  {/* Detalle decorativo al pie de la tarjeta */}
+                  <div className="mt-8 w-8 h-1 bg-purple-100 rounded-full group-hover:w-full transition-all duration-700" />
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

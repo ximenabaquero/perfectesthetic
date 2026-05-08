@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.perfectesthetic.com"),
   title: "Perfestetic - Lipolisis Láser",
   description: "Centro de estética especializado en lipolisis láser. Reducción de grasa, recuperación rápida y resultados visibles.",
+  icons: [{ rel: "icon", url: "/logoicono.webp", type: "image/webp" }],
   openGraph: {
     title: "Perfestetic - Lipolisis Láser",
     description: "Centro de estética especializado en lipolisis láser. Reducción de grasa, recuperación rápida y resultados visibles.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Perfestetic",
     images: [
       {
-        url: "/logoicono.webp",
+        url: "/miniatura.png",
         width: 1200,
         height: 630,
         alt: "Perfestetic - Lipolisis Láser sin cirugía",
